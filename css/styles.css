@@ -1,0 +1,19 @@
+body {
+  background-color: #eeffee;
+}
+
+.logo {
+  float: right;
+  height: 100px;
+  width: 100px;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #ddeedd
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  color: yellow;
+}
