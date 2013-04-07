@@ -1,6 +1,7 @@
 <html>
 <head>
   <script type="text/javascript" src="<?php echo site_url('/../javascripts/jquery-1.9.1.js'); ?>"></script>
+  <script type="text/javascript" src="<?php echo site_url('/../javascripts/scripts.js'); ?>"></script>
   <link href="<?php echo site_url('/../bootstrap/css/bootstrap.css'); ?>" rel="stylesheet">
 
   <style>
@@ -27,6 +28,7 @@
             </a>
             <div class="nav-collapse collapse">
               <ul class="nav">
+                <li class="active"><a href="<?php echo site_url('/categories') ?>">Categories</a></li>
                 <li class="active"><a href="<?php echo site_url('/parts') ?>">Parts</a></li>
               </ul>
             </div><!--/.nav-collapse -->

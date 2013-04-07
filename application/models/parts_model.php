@@ -6,15 +6,18 @@
       $this->load->database();
     }
 
+    public function get_parts($cateogry_id = FALSE) {
 
-    public function get_parts($slug = FALSE) {
-      if ($slug === FALSE) {
+      if ($cateogry_id === FALSE) {
+        $this->db->join('categories', 'category_id = categories.id');
         $query = $this->db->get('parts');
         return $query->result_array();
       }
 
-      $query = $this->db->get_where('parts', array('slug' => $slug));
-      return $query->row_array();
+      $this->db->join('categories', 'category_id = categories.id');
+      $query = $this->db->get_where('parts', array('category_id' => $cateogry_id));
+      return $query->result_array();
     }
+
   }
 ?>

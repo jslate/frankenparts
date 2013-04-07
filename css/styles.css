@@ -17,3 +17,7 @@ body {
 .navbar-inverse .nav .active > a:focus {
   color: yellow;
 }
+
+.orders .order-cell { width: 300px;}
+.orders form { width: 100px; }
+.orders form input { width: 40px; margin: 0 5px 0 0; }

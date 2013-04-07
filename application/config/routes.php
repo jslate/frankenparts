@@ -41,7 +41,10 @@
 $route['default_controller'] = "parts";
 $route['404_override'] = '';
 $route['parts'] = 'parts';
-
+$route['category/(:any)/parts'] = 'parts/for_category/$1';
+$route['categories'] = 'categories';
+$route['orders'] = 'orders';
+$route['orders/add_to_order'] = 'orders/add_to_order';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
