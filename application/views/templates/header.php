@@ -30,6 +30,7 @@
               <ul class="nav">
                 <li class="active"><a href="<?php echo site_url('/categories') ?>">Categories</a></li>
                 <li class="active"><a href="<?php echo site_url('/parts') ?>">Parts</a></li>
+                <li class="active"><a href="<?php echo site_url('/order') ?>">Order</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>

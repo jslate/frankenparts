@@ -1,0 +1,1 @@
+<p>Thank you for your order. Please allow 6 - 8 weeks for delivery.</p>

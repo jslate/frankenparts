@@ -8,19 +8,32 @@
       $this->load->library('session');
     }
 
-    public function index() {
+    public function view($id) {
+      $order_id = $this->session->userdata('order_id');
+      $data['orders_parts'] = $this->orders_model->get_order($order_id);
+      $data['title'] = 'Your Order';
+      $this->load->view('templates/header', $data);
+      $this->load->view('orders/view', $data);
+      $this->load->view('templates/footer', $data);
+    }
 
+    public function submit_order() {
+      $order_id = $this->session->userdata('order_id');
+      $this->orders_model->submit_order($order_id);
+      $data['title'] = 'Order Submitted';
+      $this->load->view('templates/header', $data);
+      $this->load->view('orders/submitted', $data);
+      $this->load->view('templates/footer', $data);
     }
 
     public function add_to_order() {
 
-      //log_message('error', 'wtf????')
-      //$customer_id = $this->session->userdata('customer_id')
-      // $order_id = $this->session->userdata('order_id')
-       //$part_id = $this->input->post('part_id')
-      //$quantity = $this->input->post('quantity')
+      $customer_id = $this->session->userdata('customer_id');
+      $order_id = $this->session->userdata('order_id');
+      $part_id = $this->input->post('part_id');
+      $quantity = $this->input->post('quantity');
 
-      //$this->orders_model->update_order($order_id, $part_id, $quantity);
+      $this->orders_model->update_order($order_id, $part_id, $quantity);
 
       $data['title'] = 'Orders';
       $this->load->view('templates/header', $data);

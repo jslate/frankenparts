@@ -12,7 +12,7 @@
       <td><?php echo $part['description'] ?></td>
       <td><?php echo $part['category_name'] ?></td>
       <td class="order-cell">
-        <a href="#" data-part="<?php echo $part['id'] ?>">Order</a>
+        <a href="#" data-part="<?php echo $part['part_id'] ?>">Order</a>
         <form style="display: none;"><input type="text" name="quantity" size="4" /><a class="btn btn-mini">Submit</a></form>
       </td>
     </tr>

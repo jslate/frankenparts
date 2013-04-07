@@ -43,7 +43,8 @@ $route['404_override'] = '';
 $route['parts'] = 'parts';
 $route['category/(:any)/parts'] = 'parts/for_category/$1';
 $route['categories'] = 'categories';
-$route['orders'] = 'orders';
+$route['order'] = 'orders/view/';
+$route['order/submit'] = 'orders/submit_order';
 $route['orders/add_to_order'] = 'orders/add_to_order';
 
 /* End of file routes.php */

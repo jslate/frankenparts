@@ -22,12 +22,14 @@ CREATE TABLE parts (
 CREATE TABLE customers (
   id int(11) NOT NULL AUTO_INCREMENT,
   customer_name varchar(128) NOT NULL,
+  password varchar(123) NOT NULL,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE orders (
   id int(11) NOT NULL AUTO_INCREMENT,
   customer_id int(11) NOT NULL,
+  submitted boolean,
   PRIMARY KEY (id)
 );
 
@@ -59,7 +61,7 @@ insert into parts (part_name, description, category_id)
   values ('Left Arm', 'Slightly larger than the right one.',
     (select id from categories where category_name = 'Upper Body'));
 
-insert into customers(customer_name) values ('Frankenstein');
+insert into customers(customer_name, password) values ('Frankenstein', 'SOMEPASS');
 
 insert into orders (customer_id) values
   ((select id from customers where customer_name = 'Frankenstein'));
