@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     form.find('a').on('click', function(event) {
       event.preventDefault();
-      $.post('../../orders/add_to_order', {
+      $.post(addToOrderUrl, {
         order_id: 1,
         customer_id: 1,
         part_id: link.data('part'),

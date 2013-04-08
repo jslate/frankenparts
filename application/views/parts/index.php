@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  var addToOrderUrl = "<?php echo site_url('/orders/add_to_order'); ?>";
+</script>
+
+
 <table class="table table-striped orders">
   <tr>
     <th>Part</th>

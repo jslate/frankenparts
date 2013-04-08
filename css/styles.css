@@ -21,3 +21,11 @@ body {
 .orders .order-cell { width: 300px;}
 .orders form { width: 100px; }
 .orders form input { width: 40px; margin: 0 5px 0 0; }
+
+.past-order {
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 50px 0;
+  padding: 10px;
+}

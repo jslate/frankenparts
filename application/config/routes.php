@@ -44,6 +44,7 @@ $route['parts'] = 'parts';
 $route['category/(:any)/parts'] = 'parts/for_category/$1';
 $route['categories'] = 'categories';
 $route['order'] = 'orders/view/';
+$route['orders/past_orders'] = 'orders/past_orders';
 $route['order/submit'] = 'orders/submit_order';
 $route['orders/add_to_order'] = 'orders/add_to_order';
 
