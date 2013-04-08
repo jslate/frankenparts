@@ -7,7 +7,7 @@
       $this->load->helper('url');
       $this->load->library('session');
       $this->session->set_userdata('customer_id', 1);
-      if (is_null($this->session->userdata('order_id'))) {
+      if (!$this->session->userdata('order_id')) {
         $data = array('customer_id' => $this->session->userdata('customer_id'));
         $this->db->insert('orders', $data);
         $this->session->set_userdata('order_id', $this->db->insert_id());
